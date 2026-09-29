@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* Target & Module Settings */
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    /* Output Compilation Settings */
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    /* Strictness & Safety Controls */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+    /* Interoperability & Optimization */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* ADD THESE TWO LINES FOR IMPORT ALIASES */
+
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

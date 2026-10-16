@@ -47,22 +47,21 @@ export async function AppConfigs(): Promise<FastifyInstance> {
 
   // JWT Authentication Plugin
   await fastify.register(jwt, {
-    secret: process.env.JWT_SECRET || "fallback_super_secret_key",
+    secret: process.env.JWT_SECRET,
   });
 
   // Swagger with Zod JSON Schema Transform
   await fastify.register(swagger, {
     openapi: {
       info: {
-        title: "Digital Restaurant Menu API",
-        description:
-          "API Documentation for Real-Time QR Code Restaurant Menu System",
+        title: "PayConnect API",
+        description: "API Documentation for Payconnect Vtu",
         version: "1.0.0",
       },
       tags: [
         {
           name: "Auth",
-          description: "Restaurant and staff authentication operations",
+          description: "Auth",
         },
         { name: "Health", description: "System health and status operations" },
       ],

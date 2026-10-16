@@ -4,7 +4,7 @@ import { baseRoutes } from "@/routes/base-routes/base.routes.js";
 
 dotenv.config();
 
-const PORT = Number(process.env.PORT) || 5000;
+const PORT = Number(process.env.PORT);
 
 const startServer = async () => {
   try {
